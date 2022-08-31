@@ -52,42 +52,41 @@ fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBNWZTiqu2i4
             if((windAngle >= 338 && windAngle <= 360) || (windAngle >= 0 && windAngle <= 22))
             {
                 windDirection = "South";
-                ctx.rotate((0 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((180) * Math.PI / 180);
             }
             else if(windAngle >= 23 && windAngle <= 67)
             {
                 windDirection = "South West";
-                ctx.rotate((45 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((180 + 45) * Math.PI / 180);
             }
             else if(windAngle >= 68 && windAngle <= 112)
             {
                 windDirection = "West";
-                ctx.rotate((90 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((270) * Math.PI / 180);
             }
             else if(windAngle >= 113 && windAngle <= 157)
             {
                 windDirection = "North West";
-                ctx.rotate((135 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((270 + 45) * Math.PI / 180);
             }
             else if(windAngle >= 158 && windAngle <= 202)
             {
                 windDirection = "North";
-                ctx.rotate((180 + 90 + 180) * Math.PI / 180);
             }
             else if(windAngle >= 203 && windAngle <= 247)
             {
                 windDirection = "North East";
-                ctx.rotate((225 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((45) * Math.PI / 180);
             }
             else if(windAngle >= 248 && windAngle <= 292)
             {
                 windDirection = "East";
-                ctx.rotate((270 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((90) * Math.PI / 180);
             }
             else if(windAngle >= 293 && windAngle <= 337)
             {
                 windDirection = "South East";
-                ctx.rotate((315 + 90 + 180) * Math.PI / 180);
+                ctx.rotate((90 + 45) * Math.PI / 180);
             }
 
             document.getElementById('windDirectionAngle').innerHTML = "&emsp;The current wind direction is: " + windDirection;
