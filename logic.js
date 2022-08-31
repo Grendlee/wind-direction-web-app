@@ -28,6 +28,7 @@ fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBNWZTiqu2i4
         
             console.log(jsonData);
 
+             
             // assign current time in UTC to match API time config
             const date = new Date();
             const hour = date.getUTCHours();
@@ -67,7 +68,7 @@ fetch(`https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBNWZTiqu2i4
             else if(windAngle >= 113 && windAngle <= 157)
             {
                 windDirection = "North West";
-                ctx.rotate((270 + 45) * Math.PI / 180);
+                ctx.rotate((315) * Math.PI / 180);
             }
             else if(windAngle >= 158 && windAngle <= 202)
             {
